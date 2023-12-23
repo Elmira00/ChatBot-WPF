@@ -1,0 +1,41 @@
+﻿<Window x:Class="WpfApp52.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp52"
+        mc:Ignorable="d"
+        Title="Chatbot" Height="611" Width="400" Icon="chatbot.ico">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" >
+            <ListBox Name="listBox"  Margin="15" Background="LightGray"  ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Vertical">
+                        </WrapPanel>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+            </ListBox>
+        </Grid>
+        <Grid Grid.Row="1"   Margin="15">
+            <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="8*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0"  >
+                <TextBox  Name="textBox" Background="LightGray" FontFamily="Comic Sans MS" FontSize="25"  Padding="2"  BorderBrush="White"></TextBox>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Button Name="sendBtn" Click="sendBtn_ClickAsync" BorderBrush="White">
+                    <StackPanel Margin="0,-5,0,-5" >
+                        <Image Source="send.png" />
+                    </StackPanel>
+                </Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
